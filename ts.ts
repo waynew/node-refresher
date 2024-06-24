@@ -12,6 +12,14 @@ const bob: User = {
     age: 23,
 };
 
-const isBobAnAdult: boolean = isAdult(bob);
+const priscilla: User = {
+    name: 'Priscilla',
+    age: 14,
+};
 
-console.log(`Bob is${isBobAnAdult? ' ' : ' not'}an adult`);
+function anAdult(user: User): void {
+    console.log(`${user.name} is${isAdult(user)? '': ' not'} an adult`);
+}
+
+anAdult(bob);
+anAdult(priscilla);

@@ -59,3 +59,19 @@ I guess another popular one for Express (web server?) is:
 Ah, TypeScript; a very good Javascript? My favorite besides vanilla.js
 
 Let's give that a shot in ts.ts
+
+
+2024-06-24 11:24:14
+===================
+
+That mostly worked, but there was a blerp with my machine, had to reboot.
+
+
+2024-06-24 11:44:30
+===================
+
+    npx tsc ts.ts && node ts.js
+
+This is a good command for compiling and running. There's probably a better way
+I don't know about yet. Could put something in the npm run, but not sure?
+

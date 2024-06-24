@@ -5,5 +5,12 @@ var bob = {
     name: 'Bob',
     age: 23,
 };
-var isBobAnAdult = isAdult(bob);
-console.log("Bob is".concat(isBobAnAdult ? ' ' : ' not', "an adult"));
+var priscilla = {
+    name: 'Priscilla',
+    age: 14,
+};
+function anAdult(user) {
+    console.log("".concat(user.name, " is").concat(isAdult(user) ? '' : ' not', " an adult"));
+}
+anAdult(bob);
+anAdult(priscilla);
