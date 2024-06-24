@@ -75,3 +75,22 @@ That mostly worked, but there was a blerp with my machine, had to reboot.
 This is a good command for compiling and running. There's probably a better way
 I don't know about yet. Could put something in the npm run, but not sure?
 
+
+2024-06-24 12:04:45
+===================
+
+Tutorial recommends ts-node, and suggests tsc before shipping, but maybe...
+well heck, on my chromebook, `npx ts-node ts.ts` takes 5s, while `npx tsc ts.ts
+&& node ts.ts` takes 14s. So that's probably a bit faster to just run
+
+    npx ts-node ts.ts
+
+as opposed to
+
+    npx tsc ts.ts && node ts.js
+
+Let's see... if I put the `npx ts-node ts.ts` in my scripts it runs in 6s. So
+it looks like that adds a second to the time (or 1/5th, on a faster compy?).
+
+Not too bad.
+

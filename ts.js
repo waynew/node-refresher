@@ -11,10 +11,11 @@ var priscilla = {
 };
 var alice = {
     name: 'Alice',
-    age: 'Secret!',
+    age: 42,
 };
 function anAdult(user) {
-    console.log("".concat(user.name, " is").concat(isAdult(user, 'naughty string where it does not belong') ? '' : ' not', " an adult"));
+    console.log("".concat(user.name, " is").concat(isAdult(user) ? '' : ' not', " an adult"));
 }
 anAdult(bob);
 anAdult(priscilla);
+anAdult(alice);

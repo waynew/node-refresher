@@ -1,8 +1,10 @@
 {
     "scripts": {
-        "start-one": "node one.js"
+        "start-one": "node one.js",
+        "ts": "npx ts-node ts.ts"
     },
     "devDependencies": {
+        "ts-node": "^10.9.2",
         "typescript": "^5.5.2"
     }
 }
