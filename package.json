@@ -1,5 +1,8 @@
 {
     "scripts": {
         "start-one": "node one.js"
+    },
+    "devDependencies": {
+        "typescript": "^5.5.2"
     }
 }
