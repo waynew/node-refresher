@@ -7,8 +7,8 @@ const server = createServer((req, res) => {
     res.statusCode = 201;
     res.setHeader('Content-Type', 'text/plain');
     res.setHeader('X-My-Thing', 'one');
-    res.setHeader('X-My-Thing', 'two');
     res.end('Heeeeey dude!');
+    res.end('this will be sad');
 });
 
 server.listen(port, hostname, () => {
