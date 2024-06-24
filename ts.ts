@@ -17,8 +17,13 @@ const priscilla: User = {
     age: 14,
 };
 
+const alice: User = {
+    name: 'Alice',
+    age: 'Secret!',
+};
+
 function anAdult(user: User): void {
-    console.log(`${user.name} is${isAdult(user)? '': ' not'} an adult`);
+    console.log(`${user.name} is${isAdult(user, 'naughty string where it does not belong')? '': ' not'} an adult`);
 }
 
 anAdult(bob);

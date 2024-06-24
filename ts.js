@@ -9,8 +9,12 @@ var priscilla = {
     name: 'Priscilla',
     age: 14,
 };
+var alice = {
+    name: 'Alice',
+    age: 'Secret!',
+};
 function anAdult(user) {
-    console.log("".concat(user.name, " is").concat(isAdult(user) ? '' : ' not', " an adult"));
+    console.log("".concat(user.name, " is").concat(isAdult(user, 'naughty string where it does not belong') ? '' : ' not', " an adult"));
 }
 anAdult(bob);
 anAdult(priscilla);
