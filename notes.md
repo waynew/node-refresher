@@ -125,3 +125,39 @@ don't know how to "continue" like pdb, yet.
 
 Interesting - it says `node debug script_name.js` should do a thing, but on
 mine it says module not found. For a built-in debugger that's odd.
+
+
+2024-06-24 13:14:11
+===================
+
+Profiling time? Well, gonna need to add express as a dep I'm sure. I wonder how
+big of a download that is. Oh, I forgot I can use `--no-save`
+
+
+2024-06-24 13:27:21
+===================
+
+Okay - let's try `NODE_ENV=production node --prof profile.js`
+
+
+2024-06-24 13:37:04
+===================
+
+Well, that's an incomplete example. Needs 
+
+    let crypto = require('node:crypto');
+    let users = {};
+
+at the top of the thing.
+
+
+2024-06-24 17:39:03
+===================
+
+Well, this is interesting. After a break - the sample says that 97% happens in
+C++, while in my summary 74% happens in shared libs
+
+Most of my time happens in /usr/lib/libcrypto.so.3 -- almost nothing in any
+other part.
+
+But it is internal/crypto/pbkdf2. Fun!
