@@ -161,3 +161,11 @@ Most of my time happens in /usr/lib/libcrypto.so.3 -- almost nothing in any
 other part.
 
 But it is internal/crypto/pbkdf2. Fun!
+
+
+2024-06-24 17:52:19
+===================
+
+Okay, was able to re-try and it kinda worked. I didn't see nearly the same
+speedup as the example, but that's not much of a surprise, since my computer
+isn't all that fancy.

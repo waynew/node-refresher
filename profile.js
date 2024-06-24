@@ -37,13 +37,16 @@ app.get('/auth', (req, res) => {
     }
 
     const { salt, hash } = users[username];
-    const encryptHash= crypto.pbkdf2Sync(password, salt, 10000, 512, 'sha512');
-
-    if (crypto.timingSafeEqual(hash, encryptHash)) {
-        res.sendStatus(200);
-    } else {
-        res.sendStatus(401);
-    }
+    const encryptHash= crypto.pbkdf2(password, salt, 10000, 512, 'sha512',
+        (err, hash) => {
+            if (users[username].hash.toString() === hash.toString()) {
+                res.sendStatus(200);
+            }
+            else {
+                res.sendStatus(401)
+            }
+        }
+    );
 });
 
 
