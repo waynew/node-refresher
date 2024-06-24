@@ -94,3 +94,34 @@ it looks like that adds a second to the time (or 1/5th, on a faster compy?).
 
 Not too bad.
 
+
+2024-06-24 12:19:23
+===================
+
+Okay, the next bit is about webassembly, which may not be relevant to me since
+I don't (currently) plan on wasm shenanigans...
+
+Yeah, I'm going to skip that one for now. But good to know it exists.
+
+
+2024-06-24 12:21:05
+===================
+
+On debugging; local apps can access debugger with no restriction, so that's
+good to know. At the moment, it looks like you just access the debugger via
+websockets. Locally do we have to launch a separate process?
+
+
+2024-06-24 13:06:10
+===================
+
+Debugger is somewhat interesting. next/step/run is pretty reasonable though I
+don't know how to "continue" like pdb, yet.
+
+
+
+2024-06-24 13:10:23
+===================
+
+Interesting - it says `node debug script_name.js` should do a thing, but on
+mine it says module not found. For a built-in debugger that's odd.
