@@ -14,4 +14,4 @@ const bob: User = {
 
 const isBobAnAdult: boolean = isAdult(bob);
 
-console.log(`Bob is${isBobAnAdult? ' ' : ' not'} an adult`);
+console.log(`Bob is${isBobAnAdult? ' ' : ' not'}an adult`);

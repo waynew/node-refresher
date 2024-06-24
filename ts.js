@@ -6,4 +6,4 @@ var bob = {
     age: 23,
 };
 var isBobAnAdult = isAdult(bob);
-console.log("Bob is ".concat(isBobAnAdult ? '' : 'not', " an adult"));
+console.log("Bob is".concat(isBobAnAdult ? ' ' : ' not', "an adult"));
