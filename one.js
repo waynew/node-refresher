@@ -4,9 +4,10 @@ const hostname = '127.0.0.1';
 const port = 3000;
 
 const server = createServer((req, res) => {
-    console.log(req);
-    res.statusCode = 200;
+    res.statusCode = 201;
     res.setHeader('Content-Type', 'text/plain');
+    res.setHeader('X-My-Thing', 'one');
+    res.setHeader('X-My-Thing', 'two');
     res.end('Heeeeey dude!');
 });
 
